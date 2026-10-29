@@ -1,0 +1,7 @@
+# Environnement local et outils téléchargés
+/.local/
+/tools/
+node_modules/
+__pycache__/
+*.log
+.DS_Store

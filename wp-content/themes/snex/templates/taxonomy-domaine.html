@@ -1,0 +1,65 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"site-main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group site-main"><!-- wp:group {"align":"full","className":"page-hero","backgroundColor":"ink","textColor":"surface","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull page-hero has-surface-color has-ink-background-color has-text-color has-background"><!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide"><!-- wp:paragraph {"className":"eyebrow"} -->
+<p class="eyebrow">Réalisations</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:query-title {"type":"archive","showPrefix":false,"textColor":"surface"} /-->
+
+<!-- wp:paragraph {"className":"lead"} -->
+<p class="lead">Interventions en télécommunications, énergie et photovoltaïque, présentées avec l'accord des clients concernés.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"full","className":"section","backgroundColor":"paper","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull section has-paper-background-color has-background"><!-- wp:categories {"taxonomy":"domaine","className":"domain-filter","align":"wide"} /-->
+
+<!-- wp:query {"queryId":2,"query":{"perPage":12,"pages":0,"offset":0,"postType":"realisation","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide","className":"cards-query"} -->
+<div class="wp-block-query alignwide cards-query"><!-- wp:post-template {"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
+<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3"} /-->
+
+<!-- wp:group {"className":"card__body","layout":{"type":"default"}} -->
+<div class="wp-block-group card__body"><!-- wp:post-terms {"term":"domaine","className":"domain"} /-->
+
+<!-- wp:post-title {"level":3,"isLink":true} /-->
+
+<!-- wp:paragraph {"className":"meta","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"snex_lieu"}}}}} -->
+<p class="meta"></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+<!-- wp:query-pagination-previous {"label":"Précédentes"} /-->
+
+<!-- wp:query-pagination-numbers /-->
+
+<!-- wp:query-pagination-next {"label":"Suivantes"} /-->
+<!-- /wp:query-pagination -->
+
+<!-- wp:query-no-results -->
+<!-- wp:group {"className":"empty-state","layout":{"type":"default"}} -->
+<div class="wp-block-group empty-state"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Les premières réalisations arrivent bientôt</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Nous publions nos chantiers au fur et à mesure, avec l'accord des clients concernés. Pour un projet similaire au vôtre, décrivez votre besoin.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/demande-de-devis/">Demander un devis</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

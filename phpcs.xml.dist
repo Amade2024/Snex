@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<ruleset name="S-NEX">
+	<description>Normes de code WordPress pour le thème snex et l'extension snex-core.</description>
+
+	<file>wp-content/themes/snex</file>
+	<file>wp-content/plugins/snex-core</file>
+	<file>bin/seed.php</file>
+	<file>tests</file>
+
+	<arg name="extensions" value="php"/>
+	<arg name="colors"/>
+	<arg value="sp"/>
+
+	<config name="minimum_wp_version" value="6.7"/>
+	<config name="testVersion" value="8.1-"/>
+
+	<rule ref="WordPress">
+		<!-- Fichiers nommés par rôle (realisations.php), pas par classe. -->
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+		<!-- Interface et contenus en français uniquement : pas de chaînes traduisibles à ce stade. -->
+		<exclude name="WordPress.WP.I18n"/>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="snex"/>
+				<element value="Snex"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- Les motifs sont des gabarits HTML : alignement des commentaires de blocs libre. -->
+	<rule ref="Generic.WhiteSpace.ScopeIndent">
+		<exclude-pattern>*/patterns/*</exclude-pattern>
+	</rule>
+	<!-- Script de données de départ exécuté par WP-CLI. -->
+	<rule ref="WordPress.Security.EscapeOutput">
+		<exclude-pattern>bin/seed.php</exclude-pattern>
+	</rule>
+	<!-- seed.php est exécuté dans la portée locale de WP-CLI : ses variables ne sont pas globales. -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound">
+		<exclude-pattern>bin/seed.php</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.WP.GlobalVariablesOverride.Prohibited">
+		<exclude-pattern>bin/seed.php</exclude-pattern>
+	</rule>
+</ruleset>
